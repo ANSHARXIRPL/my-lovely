@@ -1,0 +1,73 @@
+
+
+
+
+body {
+  background: linear-gradient(to bottom right, #ffe6f0, #ffcce5);
+  background-image: url('https://www.transparenttextures.com/patterns/hearts.png');
+  background-repeat: repeat;
+  background-size: 150px;
+}
+
+.carousel {
+  max-width: 800px;
+  margin: 40px auto;
+  border: 10px solid #ff99cc;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
+}
+
+.carousel-item img {
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #ff66b2;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #ff66b2;
+  border-radius: 50%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Heart decorations */
+.heart-decoration {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+  background-size: contain;
+  opacity: 0.6;
+  animation: floatHeart 4s infinite ease-in-out;
+}
+
+.heart-decoration.top-left {
+  top: 10px;
+  left: 10px;
+}
+.heart-decoration.top-right {
+  top: 10px;
+  right: 10px;
+}
+.heart-decoration.bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+.heart-decoration.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+@keyframes floatHeart {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
