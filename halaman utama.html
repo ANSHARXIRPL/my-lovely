@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Debug</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<script>
+function createLoveBubble() {
+  const bubble = document.createElement('div');
+  bubble.className = 'love-bubble';
+  bubble.style.left = Math.random() * 100 + 'vw';
+  bubble.style.animationDuration = 4 + Math.random() * 3 + 's';
+
+  // Ukuran acak 30–60px
+  const size = 30 + Math.random() * 30;
+  bubble.style.width = size + 'px';
+  bubble.style.height = size + 'px';
+
+  document.body.appendChild(bubble);
+
+  setTimeout(() => {
+    bubble.remove();
+  }, 7000);
+}
+
+setInterval(createLoveBubble, 250); // lebih sering
+</script>
+
+<body>
+  
+
+    <div class="container mt-3">
+  <h2>Haiii sayangkuuu</h2>
+  <div class="mt-4 p-5 bg-primary text-white rounded">
+    <h1>For my beloved girl</h1> 
+    <p>Kamu tuh kayak permen kapas—manis, lembut, dan selalu bikin aku ketagihan. Cantiknya nggak main-main, imutnya nggak ketolong, gemesinnya bikin aku pengen peluk terus~ 😘</p> 
+  </div>
+</div>
+  
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="hover">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="ceweku 1.jpg" alt="Slide 1" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="ceweku 2.jpg" alt="Slide 2" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="ceweku 3.jpg" alt="Slide 3" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="ceweku 4.jpg" alt="Slide 4" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="ceweku 5.jpg" alt="Slide 5" class="d-block w-100">
+    </div>
+  
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+
+<!-- Tombol buka modal -->
+<div class="container mt-3 text-center">
+  <h3 class="text-pink">💗 Pesan Video Buat Kamu 💗</h3>
+  
+   <h5 class="text-pink">Klik tombol ini dan tonton sesuatu yang spesial buat kamu</h5>
+
+  
+  <button type="button" class="btn btn-love" data-bs-toggle="modal" data-bs-target="#myModal">
+  🎥 <span>Tonton Videonya</span>
+</button>
+
+</div>
+
+<div class="modal-content custom-modal custom-animated">
+
+<div class="modal-content custom-modal">
+<!-- Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-sm" style="max-width: 500px;">
+    <div class="modal-content custom-modal shadow-lg">
+
+      <!-- Modal Header -->
+      <div class="modal-header custom-header">
+  <h4 class="modal-title">💌 Dari Aku Untuk Kamu 💌</h4>
+  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+</div>
+
+
+      <!-- Modal Body -->
+      <div class="modal-body p-0">
+        <video id="myVideo" class="w-100" muted autoplay controls style="border-radius: 0 0 20px 20px;">
+          <source src="ceweku vid 1.jpg.mp4" type="video/mp4">
+          Browser kamu tidak mendukung video ini.
+        </video>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-glow" data-bs-dismiss="modal">Tutup 💞</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  const modal = document.getElementById('myModal');
+  const video = document.getElementById('myVideo');
+
+  modal.addEventListener('shown.bs.modal', () => {
+    video.play();
+  });
+
+  modal.addEventListener('hidden.bs.modal', () => {
+    video.pause();
+    video.currentTime = 0; // Reset ke awal
+  });
+</script>
+
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>
